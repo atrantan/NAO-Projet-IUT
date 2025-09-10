@@ -80,22 +80,26 @@ def main(session):
         print("Class:", class_name[2:], end="")
         print("Confidence Score:", str(np.round(confidence_score * 100))[:-2], "%")
 
-        # # Wake up robot
+        # # Mise en place motion_service
         # motion_service  = session.service("ALMotion")
-        # motion_service.wakeUp()
 
-        # # Mettre debout
-        # posture_service = session.service("ALRobotPosture")
-        # posture_service.goToPosture("StandInit", 1.0)
+        # # Wake up robot
+        # motion_service.wakeUp()
 
         # # Marcher devant 
         # motion_service.moveToward(0.5, 0.0, 0.0, [["Frequency", 1.0]])
         # time.sleep(10)
         # motion_service.stopMove()
 
-        # # marcher devant 
+        # # Marcher derriere
         # motion_service.moveToward(-0.5, 0.0, 0.0, [["Frequency", 1.0]])
         # motion_service.stopMove()
+
+        # # Mettre debout
+        # posture_service = session.service("ALRobotPosture")
+        # posture_service.goToPosture("StandInit", 1.0)
+
+
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
