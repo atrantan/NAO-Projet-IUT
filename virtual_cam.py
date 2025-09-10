@@ -10,7 +10,7 @@ import numpy as np
 import pyvirtualcam
 
 # Needed packages to instantiate the virtual cam
-# sudo apt install v4l2loopback-dkms v4l2loopback-utils
+# sudo apt install v4l2loopback-dkms v4l2loopback-utils numpy==1.23.5 opencv-python==4.9.0.80
 
 # Linux commands to reload the module
 # sudo rmmod v4l2loopback
